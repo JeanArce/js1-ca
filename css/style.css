@@ -1,0 +1,108 @@
+
+
+
+header {
+    background-color: navy;
+    display: flex;
+    padding: 15px 20px;
+}
+
+header h1 {
+    margin: 0px;
+    color: #FFFFFF;
+    font-size: 25px;
+    line-height: 50px;
+}
+
+
+header ul {
+    margin-left: auto;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+   
+    list-style: none;
+}
+
+
+header ul li {
+    margin-right: 15px;
+}
+
+header ul li:last-child {
+    margin-right: 0px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+
+
+.itemsContainer {
+    min-height: 200px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.itemsContainer .item {
+    width: 350px;
+    min-height: 200px;
+    padding: 10px;
+}
+
+
+.itemsContainer .item .itemContent {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.itemContent img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    -webkit-border-top-left-radius: 2px;
+    -webkit-border-top-right-radius: 2px;
+    -moz-border-radius-topleft: 2px;
+    -moz-border-radius-topright: 2px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.textItemContent {
+    min-height: 100px;
+    padding: 15px;
+}
+
+.textItemContent h4 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.textItemContent p {
+    font-size: 14px;
+}
+
+.textItemContent ul {
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.textItemContent ul li {
+    font-size: 14px;
+    padding: 10px 5px;
+    background-color: navy;
+    color: #FFFFFF;
+    border-radius: 3px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
