@@ -65,7 +65,7 @@ header ul li a {
 
 .itemContent img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
     object-position: top;
     -webkit-border-top-left-radius: 2px;
@@ -84,10 +84,18 @@ header ul li a {
 .textItemContent h4 {
     margin-top: 0px;
     margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
 }
 
 .textItemContent p {
     font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
 }
 
 .textItemContent ul {

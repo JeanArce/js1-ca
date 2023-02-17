@@ -1,7 +1,14 @@
+// const options = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': '533c1a9ab5msh4e4948fee8030a5p14158cjsn6715e56c9e8e',
+// 		'X-RapidAPI-Host': 'anime-db.p.rapidapi.com'
+// 	}
+// };
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '533c1a9ab5msh4e4948fee8030a5p14158cjsn6715e56c9e8e',
+		'X-RapidAPI-Key': 'a365da0a30mshee7bb8a4c39fe8ap1d21ecjsnd3a290bd29a2',
 		'X-RapidAPI-Host': 'anime-db.p.rapidapi.com'
 	}
 };
@@ -13,7 +20,41 @@ const getAnimes = async() => {
         const fetchDataAnime = await fetch(url, options);
         const jsonDataAnime = await fetchDataAnime.json();
         console.log(jsonDataAnime);
+        
+        const itemsContainer = document.querySelector("#uniqueItemContainer");
+        
+        const { data } = jsonDataAnime;
+        for(let i = 0; i < data.length; i++) {
+            const objData = data[i];
+            
+            const {image, title, synopsis, genres} = objData;
+            
+            let resultHtml = `
+                <div class='item'>
+                    <div class="itemContent">
+                        <img src="${image}" alt="${title}">
+                        <div class="textItemContent">
+                            <h4>${title}</h4>
+                            <p>${synopsis}</p>
+                            <ul>
+            `;
 
+            for(let val of genres) {
+
+                resultHtml += `
+                                <li>${val}</li>
+                `
+            }
+
+            resultHtml += `
+                            </ul>
+                        </div>
+                    <div>
+                </div>
+            `;
+
+            itemsContainer.innerHTML += resultHtml;
+        }
 
     } catch(error) {
         console.log(error);
