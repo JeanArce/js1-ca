@@ -114,3 +114,24 @@ header ul li a {
     margin-right: 10px;
     margin-bottom: 10px;
 }
+
+.seeMoreContent a {
+    text-decoration: none;
+    color: navy;
+}
+
+.imageDetails {
+    padding: 20px;
+}
+
+.imageDetails img {
+    width: 20%;
+    height: 20%;
+    float: left;
+    margin-right: 25px;
+
+}
+
+.genresStyle {
+    text-decoration: underline;
+}

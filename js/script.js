@@ -27,7 +27,7 @@ const getAnimes = async() => {
         for(let i = 0; i < data.length; i++) {
             const objData = data[i];
             
-            const {image, title, synopsis, genres} = objData;
+            const {_id, image, title, synopsis, genres} = objData;
             
             let resultHtml = `
                 <div class='item'>
@@ -48,6 +48,7 @@ const getAnimes = async() => {
 
             resultHtml += `
                             </ul>
+                            <p class="seeMoreContent"><a href="details.html?id=${_id}">See more...</a></p>
                         </div>
                     <div>
                 </div>
@@ -60,6 +61,7 @@ const getAnimes = async() => {
         console.log(error);
     }
 };
+
 getAnimes();
 
 
