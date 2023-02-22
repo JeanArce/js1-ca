@@ -1,5 +1,7 @@
 
-
+body {
+    margin: 0px;
+}
 
 header {
     background-color: navy;
@@ -135,3 +137,66 @@ header ul li a {
 .genresStyle {
     text-decoration: underline;
 }
+
+.loadingInDetails {
+    display: block !important; 
+    margin: 0px auto !important;
+    float: none !important;
+}
+
+.contactContainer {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+form {
+    padding: 0px;
+    margin-top: 20px;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup .contactError {
+    margin-top: 4px;
+    color: red;
+    display: none;
+}
+
+.contactContainer .successContainer {
+    background-color: rgb(156, 241, 156);
+    padding: 10px;
+    margin-top: 20px;
+    display: none;
+}
+
+.formGroup label {
+    display: block;
+}
+
+.formGroup input {
+  
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #FFFFFF;
+    border: solid;
+    width: 200px;
+    padding: 1rem;
+    color: rgb(150, 138, 138);
+    margin-top: 10px;
+    border-radius: .1rem;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+
+ 
+
+

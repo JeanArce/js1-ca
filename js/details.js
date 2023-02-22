@@ -23,6 +23,8 @@ const imageDetailsContainer = document.querySelector("#imageDetailsContainer");
 
 async function getDetails() {
 
+	imageDetailsContainer.innerHTML = `<img class="loadingInDetails" src="loading.gif" alt="loading">`;
+
 	try {
 		const fetchData = await fetch(url, options);
 		const jsonData = await fetchData.json();
@@ -32,6 +34,7 @@ async function getDetails() {
 	
 	} catch (error) {
 		console.log(error);
+		imageDetailsContainer.innerHTML = `<p>Failed fetching anime details.</p>`
 	}
 
 }

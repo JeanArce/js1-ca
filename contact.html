@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Contact Us</title>
 </head>
@@ -19,9 +18,45 @@
         </ul>
     </header>
 
-    <main>
-        <p>Contact page</p>
+    <main class="contactContainer">
+        <div class="successContainer">
+            <p>The form passed the validation! </p>
+        </div>
+        <form id="contactForm">
+            <div class="formGroup">
+                <label for="name"> Name (required)</label>
+                <input name="name" id="name">
+                <div class="contactError" id="nameError">Please enter your name.</div>
+            </div>
+            
+            <div class="formGroup">
+                <label for="subject">Subject (mimimum 10 characters)</label>
+                <input name="subject" id="subject" >
+                <div class="contactError" id="subjectError">Subject must be a minimum of 10 characters.</div>
+            </div>
+
+                
+            <div class="formGroup">
+                <label for="email">Email (required)</label>
+                <input name="email" id="email">
+                <div class="contactError" id="emailError">Please enter a valid email address.</div>
+            </div>
+
+             
+            <div class="formGroup">
+                <label for="address">Address (minimum 25 characters)</label>
+                <input name="address" id="address" >
+                <div class="contactError" id="addressError">Address must be a minimum of 25 characters.</div>
+            </div>
+            
+            <button>Submit</button>
+
+
+        </form>
+        
+
     </main>
+    <script src="js/contact.js"></script>
 
 </body>
 </html>
