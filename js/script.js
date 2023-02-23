@@ -5,6 +5,7 @@
 // 		'X-RapidAPI-Host': 'anime-db.p.rapidapi.com'
 // 	}
 // };
+
 const options = {
 	method: 'GET',
 	headers: {

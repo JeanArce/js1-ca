@@ -1,3 +1,4 @@
+
 const contactForm = document.querySelector("#contactForm");
 const fullname = document.querySelector("#name");
 const subject = document.querySelector("#subject");
@@ -20,6 +21,8 @@ const successContainer = document.querySelector(".successContainer");
 
 //     console.log(value);
 // }
+
+
 
 contactForm.addEventListener('submit', contactSubmit);
 
@@ -70,10 +73,9 @@ function contactSubmit(event) {
    
 }
 
-const validateEmail = (email) => {
-    return String(email)
-    .toLowerCase()
-    .match(
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    );
+function validateEmail(email) {
+    const regEx = /\S+@\S+\.\S+/;
+    const patternMatches = regEx.test(email);
+    return patternMatches;
+
 };

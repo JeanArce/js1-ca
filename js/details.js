@@ -28,6 +28,7 @@ async function getDetails() {
 	try {
 		const fetchData = await fetch(url, options);
 		const jsonData = await fetchData.json();
+		document.title = jsonData.title ;
 
 		createHtml(jsonData);
 		
